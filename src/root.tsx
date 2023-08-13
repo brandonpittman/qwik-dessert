@@ -1,6 +1,5 @@
-import { Counter } from "./components/counter/counter";
-import { Logo } from "./components/logo/logo";
-
+import { PrimaryBox } from "./atoms.css";
+import { Box } from "./Box";
 export default () => {
   return (
     <>
@@ -9,8 +8,8 @@ export default () => {
         <title>Qwik Blank App</title>
       </head>
       <body>
-        <Logo />
-        <Counter />
+        <Box as="input" backgroundColor="primary" color="inverted"></Box>
+        <PrimaryBox>Testing again</PrimaryBox>
       </body>
     </>
   );
