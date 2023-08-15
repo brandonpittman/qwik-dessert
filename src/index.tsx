@@ -3,8 +3,10 @@ import { composeClassNames, extractAtomsFromProps } from "@dessert-box/core";
 import {
   CSSProperties,
   JSXTagName,
+  jsx,
   QwikIntrinsicElements,
 } from "@builder.io/qwik";
+import { JSX } from "@builder.io/qwik/jsx-runtime";
 
 type CreateBoxParams<AtomsFn> = {
   atoms: AtomsFn;
@@ -61,22 +63,19 @@ export function createBox<AtomsFn extends AtomsFnBase>({
   }: CreateBoxProps<AtomsFn, C>) => {
     const classProps = extractAtomsFromProps({ ...others }, atomsFn);
 
-    const Element = as || "div";
-
-    return (
-      <Element
-        ref={ref}
-        style={{ ...style, ...classProps.customProps }}
-        class={composeClassNames(
-          klass,
-          atomsFn(classProps.atomProps),
-          defaultClassName
-        )}
-        {...classProps.otherProps}
-        children={children}
-      />
-    );
+    return jsx(as || "div", {
+      ref,
+      style: { ...style, ...classProps.customProps },
+      class: composeClassNames(
+        klass,
+        atomsFn(classProps.atomProps),
+        defaultClassName
+      ),
+      children,
+      ...classProps.otherProps,
+    }) as JSX.Element;
   };
+
   return Box;
 }
 
