@@ -1,6 +1,6 @@
 {
   "name": "qwik-dessert",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "description": "Box component and styled function for Qwik and Vanilla Extract.",
   "main": "./lib/index.qwik.mjs",
   "qwik": "./lib/index.qwik.mjs",
