@@ -18,8 +18,8 @@ This function creates a box component that uses your Vanilla Extract Sprinkles.
 Create a box component like this:
 
 ```ts
-import { atoms } from "~/styles/atoms.css";
 import { createBox } from "qwik-dessert";
+import { atoms } from "~/styles/atoms.css";
 // atoms being the sprinkles you created
 
 export const Box = createBox({ atoms });
