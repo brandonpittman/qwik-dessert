@@ -1,6 +1,6 @@
 import type { AtomsFnBase } from "@dessert-box/core";
 import { composeClassNames, extractAtomsFromProps } from "@dessert-box/core";
-import type {
+import {
   CSSProperties,
   JSXTagName,
   QwikIntrinsicElements,

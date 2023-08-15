@@ -9,8 +9,16 @@ export default () => {
         <title>Qwik Blank App</title>
       </head>
       <body>
-        <Box as="button" color="primary">
-          hi there
+        <Box
+          backgroundColor="primary"
+          color="inverted"
+          __border="none"
+          __borderRadius="4px"
+          padding="large"
+          __fontSize="2rem"
+          __cursor="pointer"
+        >
+          Click me
         </Box>
         <PrimaryBox>Testing again</PrimaryBox>
       </body>
