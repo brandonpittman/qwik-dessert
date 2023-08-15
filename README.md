@@ -40,7 +40,7 @@ Unlike the `styled-vanilla-extract` module for Qwik, our `styled` function is a 
 
 Use it like so:
 
-```
+```ts
 export const Button = styled("button", {
   backgroundColor: "blue",
   color: "white",
