@@ -1,11 +1,17 @@
 # Qwik Dessert 🍰
 
+## Install
+
+`npm install qwik-dessert`
+
+## Usage
+
 This module provides two functions:
 
 - `createBox`
 - `styled`
 
-## `createBox`
+### `createBox`
 
 This function creates a box component that uses your Vanilla Extract Sprinkles.
 
@@ -34,7 +40,7 @@ Then, you can use your box component:
 
 You can use your sprinkles values or you can use any CSS property as an escape hatch by prefixing the property with `__`.
 
-## `styled`
+### `styled`
 
 Unlike the `styled-vanilla-extract` module for Qwik, our `styled` function is a bit simpler. We require a string value for a tag name and then a Vanilla Extract style object. We do not support a legacy Styled Components call like `styled.button`.
 
@@ -45,6 +51,6 @@ export const Button = styled("button", {
   backgroundColor: "blue",
   color: "white",
   borderRadius: 4,
-  border: "none"
-})
+  border: "none",
+});
 ```
