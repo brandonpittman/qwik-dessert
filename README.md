@@ -1,47 +1,50 @@
-# Qwik Library ⚡️
+# Qwik Dessert 🍰
 
-- [Qwik Docs](https://qwik.builder.io/)
-- [Discord](https://qwik.builder.io/chat)
-- [Qwik on GitHub](https://github.com/BuilderIO/qwik)
-- [@QwikDev](https://twitter.com/QwikDev)
-- [Vite](https://vitejs.dev/)
-- [Partytown](https://partytown.builder.io/)
-- [Mitosis](https://github.com/BuilderIO/mitosis)
-- [Builder.io](https://www.builder.io/)
+This module provides two functions:
 
----
+- `createBox`
+- `styled`
 
-## Project Structure
+## `createBox`
 
-Inside your project, you'll see the following directories and files:
+This function creates a box component that uses your Vanilla Extract Sprinkles.
 
-```
-├── public/
-│   └── ...
-└── src/
-    ├── components/
-    │   └── ...
-    └── index.ts
+Create a box component like this:
+
+```ts
+import { atoms } from "~/styles/atoms.css";
+// atoms being the sprinkles you created
+
+export const Box = createBox({ atoms });
 ```
 
-- `src/components`: Recommended directory for components.
+Then, you can use your box component:
 
-- `index.ts`: The entry point of your component library, make sure all the public components are exported from this file.
+```tsx
+<Box
+  as="button"
+  backgroundColor="primary"
+  color="inverted"
+  __border="none"
+  __borderRadius="4px"
+>
+  Click me
+</Box>
+```
 
-## Development
+You can use your sprinkles values or you can use any CSS property as an escape hatch by prefixing the property with `__`.
 
-Development mode uses [Vite's development server](https://vitejs.dev/). For Qwik during development, the `dev` command will also server-side render (SSR) the output. The client-side development modules are loaded by the browser.
+## `styled`
+
+Unlike the `styled-vanilla-extract` module for Qwik, our `styled` function is a bit simpler. We require a string value for a tag name and then a Vanilla Extract style object. We do not support a legacy Styled Components call like `styled.button`.
+
+Use it like so:
 
 ```
-npm run dev
-```
-
-> Note: during dev mode, Vite will request many JS files, which does not represent a Qwik production build.
-
-## Production
-
-The production build should generate the production build of your component library in (./lib) and the typescript type definitions in (./lib-types).
-
-```
-npm run build
+export const Button = styled("button", {
+  backgroundColor: "blue",
+  color: "white",
+  borderRadius: 4,
+  border: "none"
+})
 ```
