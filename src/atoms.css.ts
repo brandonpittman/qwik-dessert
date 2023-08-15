@@ -1,6 +1,5 @@
 import { defineProperties, createSprinkles } from "@vanilla-extract/sprinkles";
 import { atomized } from "./Box";
-import { styled } from "./styled";
 
 const space = {
   none: 0,

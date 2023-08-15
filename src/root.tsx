@@ -1,5 +1,6 @@
 import { PrimaryBox } from "./atoms.css";
 import { Box } from "./Box";
+Box;
 export default () => {
   return (
     <>
@@ -8,7 +9,9 @@ export default () => {
         <title>Qwik Blank App</title>
       </head>
       <body>
-        <Box as="input" backgroundColor="primary" color="inverted"></Box>
+        <Box as="button" color="primary">
+          hi there
+        </Box>
         <PrimaryBox>Testing again</PrimaryBox>
       </body>
     </>

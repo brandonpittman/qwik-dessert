@@ -79,3 +79,5 @@ export function createBox<AtomsFn extends AtomsFnBase>({
   };
   return Box;
 }
+
+export { styled } from "./styled";
