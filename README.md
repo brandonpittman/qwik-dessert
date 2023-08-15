@@ -19,6 +19,7 @@ Create a box component like this:
 
 ```ts
 import { atoms } from "~/styles/atoms.css";
+import { createBox } from "qwik-dessert";
 // atoms being the sprinkles you created
 
 export const Box = createBox({ atoms });
@@ -47,6 +48,8 @@ Unlike the `styled-vanilla-extract` module for Qwik, our `styled` function is a 
 Use it like so:
 
 ```ts
+import { styled } from "qwik-dessert";
+
 export const Button = styled("button", {
   backgroundColor: "blue",
   color: "white",
