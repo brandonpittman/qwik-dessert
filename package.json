@@ -5,6 +5,7 @@
   "main": "./lib/index.qwik.mjs",
   "qwik": "./lib/index.qwik.mjs",
   "types": "./lib-types/index.d.ts",
+  "license": "MIT",
   "exports": {
     ".": {
       "import": "./lib/index.qwik.mjs",
