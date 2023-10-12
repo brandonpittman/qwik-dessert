@@ -11,6 +11,10 @@
       "import": "./lib/index.qwik.mjs",
       "require": "./lib/index.qwik.cjs",
       "types": "./lib-types/index.d.ts"
+    },
+    "./styledRuntime": {
+      "import": "./lib/styledRuntime.qwik.mjs",
+      "require": "./lib/styledRuntime.qwik.cjs"
     }
   },
   "files": [

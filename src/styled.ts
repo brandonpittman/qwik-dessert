@@ -14,7 +14,7 @@ export function styled(el: JSXTagName, rules: ComplexStyleRule) {
   const Component = styledRuntime(el, className);
 
   addFunctionSerializer(Component, {
-    importPath: "./styledRuntime",
+    importPath: "qwik-dessert/styledRuntime",
     importName: "styledRuntime",
     args: args as any,
   });

@@ -75,7 +75,6 @@ export function createBox<AtomsFn extends AtomsFnBase>({
       ...classProps.otherProps,
     }) as JSX.Element;
   };
-
   return Box;
 }
 
