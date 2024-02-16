@@ -55,7 +55,7 @@
     "prettier": "2.8.8",
     "styled-vanilla-extract": "^0.5.4",
     "typescript": "5.1.6",
-    "undici": "5.26.2",
+    "undici": "5.28.3",
     "vite": "4.4.12",
     "vite-tsconfig-paths": "4.2.0",
     "@vanilla-extract/sprinkles": "^1.6.1"
